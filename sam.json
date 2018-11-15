@@ -23,7 +23,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:32.688Z"
+    "timestamp": "2018-10-22T08:33:32.688Z",
+    "cell": 1
   },
   {
     "code": "ls sam_data/",
@@ -36,7 +37,8 @@
       "msg_type": "stream",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:05:16.200Z"
+    "timestamp": "2018-10-22T08:05:16.200Z",
+    "cell": 3
   },
   {
     "code": "ls sam_data/",
@@ -49,7 +51,8 @@
       "msg_type": "stream",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:45.366Z"
+    "timestamp": "2018-10-22T08:33:45.366Z",
+    "cell": 3
   },
   {
     "code": "mortality = pd.read_csv('sam_data/child_mortality_0_5_year_olds_dying_per_1000_born.csv')\nmortality",
@@ -66,7 +69,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:06:03.106Z"
+    "timestamp": "2018-10-22T08:06:03.106Z",
+    "cell": 4
   },
   {
     "code": "mortality = pd.read_csv('sam_data/child_mortality_0_5_year_olds_dying_per_1000_born.csv')\nmortality",
@@ -83,7 +87,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:45.575Z"
+    "timestamp": "2018-10-22T08:33:45.575Z",
+    "cell": 4
   },
   {
     "code": "years = [str(year) for year in range(1800, 2019)]\nmortality.melt(id_vars=['geo'], value_vars=years)",
@@ -100,7 +105,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:08:57.429Z"
+    "timestamp": "2018-10-22T08:08:57.429Z",
+    "cell": 5
   },
   {
     "code": "years = [str(year) for year in range(1800, 2019)]\nmortality.melt(id_vars=['geo'], value_vars=years,\n               var_name='year', value_name='child_mortality')",
@@ -117,7 +123,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:10:03.188Z"
+    "timestamp": "2018-10-22T08:10:03.188Z",
+    "cell": 5
   },
   {
     "code": "years = [str(year) for year in range(1800, 2019)]\n\ndef tidy(df):\n    return df.melt(id_vars=['geo'], value_vars=years,\n                   var_name='year', value_name='child_mortality')\n\ntidy(mortality)",
@@ -134,7 +141,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:10:28.033Z"
+    "timestamp": "2018-10-22T08:10:28.033Z",
+    "cell": 5
   },
   {
     "code": "years = [str(year) for year in range(1800, 2019)]\n\ndef tidy(df, variable=None):\n    return df.melt(id_vars=['geo'], value_vars=years,\n                   var_name='year', value_name=variable)\n\ntidy(mortality, 'child_mortality')",
@@ -151,7 +159,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:14:27.325Z"
+    "timestamp": "2018-10-22T08:14:27.325Z",
+    "cell": 5
   },
   {
     "code": "years = [str(year) for year in range(1800, 2019)]\n\ndef tidy(df, variable=None):\n    return df.melt(id_vars=['geo'], value_vars=years,\n                   var_name='year', value_name=variable)\n\ntidy(mortality, 'child_mortality')",
@@ -168,7 +177,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:45.616Z"
+    "timestamp": "2018-10-22T08:33:45.616Z",
+    "cell": 5
   },
   {
     "code": "from glob import glob\n\nall_csvs = glob('sam_data/*.csv')\nall_csvs",
@@ -184,7 +194,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:11:05.182Z"
+    "timestamp": "2018-10-22T08:11:05.182Z",
+    "cell": 6
   },
   {
     "code": "from glob import glob\n\nall_csvs = glob('sam_data/*.csv')\nall_dfs = [pd.read_csv(csv) for csv in all_csvs]\nlen(all_dfs)",
@@ -200,7 +211,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:11:29.347Z"
+    "timestamp": "2018-10-22T08:11:29.347Z",
+    "cell": 6
   },
   {
     "code": "from glob import glob\n\nall_csvs = glob('sam_data/*.csv')\nall_csvs",
@@ -216,7 +228,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:12:21.256Z"
+    "timestamp": "2018-10-22T08:12:21.256Z",
+    "cell": 6
   },
   {
     "code": "from glob import glob\n\nall_csvs = glob('sam_data/*.csv')\nall_csvs",
@@ -232,7 +245,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:45.627Z"
+    "timestamp": "2018-10-22T08:33:45.627Z",
+    "cell": 6
   },
   {
     "code": "var_names = ['co2', 'income', 'life_exp', 'fertility', 'child_mortality',\n             'poverty_percent', 'democracy']\n\nall_dfs = [tidy(pd.read_csv(csv), variable)\n           for csv, variable in zip(all_csvs, var_names)]\nall_dfs[0]",
@@ -249,7 +263,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:15:01.853Z"
+    "timestamp": "2018-10-22T08:15:01.853Z",
+    "cell": 7
   },
   {
     "code": "var_names = ['co2', 'income', 'life_exp', 'fertility', 'child_mortality',\n             'poverty_percent', 'democracy']\n\nall_dfs = [tidy(pd.read_csv(csv), variable)\n           for csv, variable in zip(all_csvs, var_names)]\nall_dfs[0]",
@@ -266,7 +281,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:45.849Z"
+    "timestamp": "2018-10-22T08:33:45.849Z",
+    "cell": 7
   },
   {
     "code": "def merge(df1, df2):\n    return df1.merge(df2, on=['geo', 'year'])\n\nmerge(all_dfs[0], all_dfs[1])",
@@ -283,7 +299,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:16:46.568Z"
+    "timestamp": "2018-10-22T08:16:46.568Z",
+    "cell": 8
   },
   {
     "code": "def merge(df1, df2):\n    return df1.merge(df2, on=['geo', 'year'])\n\nmerge(all_dfs[0], all_dfs[1])",
@@ -300,7 +317,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:45.924Z"
+    "timestamp": "2018-10-22T08:33:45.924Z",
+    "cell": 8
   },
   {
     "code": "from functools import reduce\n\ndata = reduce(merge, all_dfs)\ndata",
@@ -317,7 +335,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:17:08.513Z"
+    "timestamp": "2018-10-22T08:17:08.513Z",
+    "cell": 9
   },
   {
     "code": "from functools import reduce\n\ndata = reduce(merge, all_dfs)\ndata",
@@ -334,7 +353,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:46.091Z"
+    "timestamp": "2018-10-22T08:33:46.091Z",
+    "cell": 9
   },
   {
     "code": "data['year'].value_counts()",
@@ -350,7 +370,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:18:37.070Z"
+    "timestamp": "2018-10-22T08:18:37.070Z",
+    "cell": 12
   },
   {
     "code": "data['income'].hist()",
@@ -366,7 +387,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:18:50.717Z"
+    "timestamp": "2018-10-22T08:18:50.717Z",
+    "cell": 12
   },
   {
     "code": "data['income'].hist()",
@@ -385,7 +407,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:18:50.977Z"
+    "timestamp": "2018-10-22T08:18:50.977Z",
+    "cell": 12
   },
   {
     "code": "data['income'].hist(normed=True)",
@@ -398,7 +421,8 @@
       "msg_type": "stream",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:19:05.750Z"
+    "timestamp": "2018-10-22T08:19:05.750Z",
+    "cell": 12
   },
   {
     "code": "data['income'].hist(normed=True)",
@@ -414,7 +438,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:19:05.774Z"
+    "timestamp": "2018-10-22T08:19:05.774Z",
+    "cell": 12
   },
   {
     "code": "data['income'].hist(normed=True)",
@@ -433,7 +458,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:19:05.967Z"
+    "timestamp": "2018-10-22T08:19:05.967Z",
+    "cell": 12
   },
   {
     "code": "data['income'].hist(density=True)",
@@ -449,7 +475,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:19:09.130Z"
+    "timestamp": "2018-10-22T08:19:09.130Z",
+    "cell": 12
   },
   {
     "code": "data['income'].hist(density=True)",
@@ -468,7 +495,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:19:09.327Z"
+    "timestamp": "2018-10-22T08:19:09.327Z",
+    "cell": 12
   },
   {
     "code": "data['income'].hist(density=True, bins=np.arange(0, 30000, 1000))",
@@ -484,7 +512,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:19:23.813Z"
+    "timestamp": "2018-10-22T08:19:23.813Z",
+    "cell": 12
   },
   {
     "code": "data['income'].hist(density=True, bins=np.arange(0, 30000, 1000))",
@@ -503,7 +532,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:19:24.008Z"
+    "timestamp": "2018-10-22T08:19:24.008Z",
+    "cell": 12
   },
   {
     "code": "data['income'].hist(density=True, bins=np.arange(0, 30000, 1000))",
@@ -519,7 +549,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:46.151Z"
+    "timestamp": "2018-10-22T08:33:46.151Z",
+    "cell": 12
   },
   {
     "code": "data['income'].hist(density=True, bins=np.arange(0, 30000, 1000))",
@@ -538,7 +569,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:46.399Z"
+    "timestamp": "2018-10-22T08:33:46.399Z",
+    "cell": 12
   },
   {
     "code": "data.plot.scatter('income', 'life_ex')",
@@ -580,7 +612,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:20:18.475Z"
+    "timestamp": "2018-10-22T08:20:18.475Z",
+    "cell": 13
   },
   {
     "code": "data.plot.scatter('income', 'life_exp')",
@@ -596,7 +629,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:20:19.767Z"
+    "timestamp": "2018-10-22T08:20:19.767Z",
+    "cell": 13
   },
   {
     "code": "data.plot.scatter('income', 'life_exp')",
@@ -615,7 +649,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:20:20.188Z"
+    "timestamp": "2018-10-22T08:20:20.188Z",
+    "cell": 13
   },
   {
     "code": "sns.kdeplot(data['income'], data['life_exp'])",
@@ -640,7 +675,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:24:27.550Z"
+    "timestamp": "2018-10-22T08:24:27.550Z",
+    "cell": 13
   },
   {
     "code": "sns.kdeplot(data['income'], data['life_exp'])",
@@ -659,7 +695,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:24:27.709Z"
+    "timestamp": "2018-10-22T08:24:27.709Z",
+    "cell": 13
   },
   {
     "code": "sample = data.sample(frac=0.1)\nsns.kdeplot(sample['income'], sample['life_exp'])",
@@ -675,7 +712,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:25:28.792Z"
+    "timestamp": "2018-10-22T08:25:28.792Z",
+    "cell": 13
   },
   {
     "code": "sample = data.sample(frac=0.1)\nsns.kdeplot(sample['income'], sample['life_exp'])",
@@ -694,7 +732,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:25:28.973Z"
+    "timestamp": "2018-10-22T08:25:28.973Z",
+    "cell": 13
   },
   {
     "code": "sample = data.sample(frac=0.2)\nsns.kdeplot(sample['income'], sample['life_exp'])",
@@ -710,7 +749,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:25:47.551Z"
+    "timestamp": "2018-10-22T08:25:47.551Z",
+    "cell": 13
   },
   {
     "code": "sample = data.sample(frac=0.2)\nsns.kdeplot(sample['income'], sample['life_exp'])",
@@ -729,7 +769,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:25:47.706Z"
+    "timestamp": "2018-10-22T08:25:47.706Z",
+    "cell": 13
   },
   {
     "code": "sns.scatterplot(x='income', y='life_exp', data=data)",
@@ -745,7 +786,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:27:22.580Z"
+    "timestamp": "2018-10-22T08:27:22.580Z",
+    "cell": 13
   },
   {
     "code": "sns.scatterplot(x='income', y='life_exp', data=data)",
@@ -764,7 +806,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:27:23.209Z"
+    "timestamp": "2018-10-22T08:27:23.209Z",
+    "cell": 13
   },
   {
     "code": "sns.scatterplot(x='income', y='life_exp', data=data, alpha=0.7)",
@@ -780,7 +823,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:27:33.735Z"
+    "timestamp": "2018-10-22T08:27:33.735Z",
+    "cell": 13
   },
   {
     "code": "sns.scatterplot(x='income', y='life_exp', data=data, alpha=0.7)",
@@ -799,7 +843,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:27:34.441Z"
+    "timestamp": "2018-10-22T08:27:34.441Z",
+    "cell": 13
   },
   {
     "code": "sns.scatterplot(x='income', y='life_exp', data=data, alpha=0.3)",
@@ -815,7 +860,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:27:37.155Z"
+    "timestamp": "2018-10-22T08:27:37.155Z",
+    "cell": 13
   },
   {
     "code": "sns.scatterplot(x='income', y='life_exp', data=data, alpha=0.3)",
@@ -834,7 +880,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:27:37.813Z"
+    "timestamp": "2018-10-22T08:27:37.813Z",
+    "cell": 13
   },
   {
     "code": "plt.figure(figsize=(8, 4))\nsns.scatterplot(x='income', y='life_exp', data=data, alpha=0.3)",
@@ -850,7 +897,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:27:50.886Z"
+    "timestamp": "2018-10-22T08:27:50.886Z",
+    "cell": 13
   },
   {
     "code": "plt.figure(figsize=(8, 4))\nsns.scatterplot(x='income', y='life_exp', data=data, alpha=0.3)",
@@ -869,7 +917,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:27:51.592Z"
+    "timestamp": "2018-10-22T08:27:51.592Z",
+    "cell": 13
   },
   {
     "code": "plt.figure(figsize=(8, 5))\nsns.scatterplot(x='income', y='life_exp', data=data, alpha=0.3)",
@@ -885,7 +934,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:27:54.929Z"
+    "timestamp": "2018-10-22T08:27:54.929Z",
+    "cell": 13
   },
   {
     "code": "plt.figure(figsize=(8, 5))\nsns.scatterplot(x='income', y='life_exp', data=data, alpha=0.3)",
@@ -904,7 +954,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:27:55.696Z"
+    "timestamp": "2018-10-22T08:27:55.696Z",
+    "cell": 13
   },
   {
     "code": "plt.figure(figsize=(8, 5))\nsns.scatterplot(x='income', y='life_exp', data=data, alpha=0.3)",
@@ -920,7 +971,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:46.548Z"
+    "timestamp": "2018-10-22T08:33:46.548Z",
+    "cell": 13
   },
   {
     "code": "plt.figure(figsize=(8, 5))\nsns.scatterplot(x='income', y='life_exp', data=data, alpha=0.3)",
@@ -939,7 +991,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:47.421Z"
+    "timestamp": "2018-10-22T08:33:47.421Z",
+    "cell": 13
   },
   {
     "code": "usa = data.loc[data['geo'] == 'United States of America', :]\nplt.figure(figsize=(8, 5))\nsns.scatterplot(x='income', y='life_exp', data=data, alpha=0.3)",
@@ -955,7 +1008,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:29:39.637Z"
+    "timestamp": "2018-10-22T08:29:39.637Z",
+    "cell": 14
   },
   {
     "code": "usa = data.loc[data['geo'] == 'United States of America', :]\nplt.figure(figsize=(8, 5))\nsns.scatterplot(x='income', y='life_exp', data=data, alpha=0.3)",
@@ -974,7 +1028,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:29:40.403Z"
+    "timestamp": "2018-10-22T08:29:40.403Z",
+    "cell": 14
   },
   {
     "code": "usa = data.loc[data['geo'] == 'United States of America', :]\nplt.figure(figsize=(8, 5))\nsns.scatterplot(x='income', y='life_exp', data=usa, alpha=0.3)",
@@ -990,7 +1045,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:29:45.601Z"
+    "timestamp": "2018-10-22T08:29:45.601Z",
+    "cell": 14
   },
   {
     "code": "usa = data.loc[data['geo'] == 'United States of America', :]\nplt.figure(figsize=(8, 5))\nsns.scatterplot(x='income', y='life_exp', data=usa, alpha=0.3)",
@@ -1009,7 +1065,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:29:45.821Z"
+    "timestamp": "2018-10-22T08:29:45.821Z",
+    "cell": 14
   },
   {
     "code": "usa = data.loc[data['geo'] == 'United States', :]\nplt.figure(figsize=(8, 5))\nsns.scatterplot(x='income', y='life_exp', data=usa, alpha=0.3)",
@@ -1025,7 +1082,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:30:26.640Z"
+    "timestamp": "2018-10-22T08:30:26.640Z",
+    "cell": 14
   },
   {
     "code": "usa = data.loc[data['geo'] == 'United States', :]\nplt.figure(figsize=(8, 5))\nsns.scatterplot(x='income', y='life_exp', data=usa, alpha=0.3)",
@@ -1044,7 +1102,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:30:26.873Z"
+    "timestamp": "2018-10-22T08:30:26.873Z",
+    "cell": 14
   },
   {
     "code": "usa = data.loc[data['geo'] == 'United States', :]\nplt.figure(figsize=(8, 5))\nsns.scatterplot(x='income', y='life_exp', data=usa, alpha=0.7)",
@@ -1060,7 +1119,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:30:35.221Z"
+    "timestamp": "2018-10-22T08:30:35.221Z",
+    "cell": 14
   },
   {
     "code": "usa = data.loc[data['geo'] == 'United States', :]\nplt.figure(figsize=(8, 5))\nsns.scatterplot(x='income', y='life_exp', data=usa, alpha=0.7)",
@@ -1079,7 +1139,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:30:35.441Z"
+    "timestamp": "2018-10-22T08:30:35.441Z",
+    "cell": 14
   },
   {
     "code": "usa = data.loc[data['geo'] == 'United States', :]\nplt.figure(figsize=(8, 5))\nsns.scatterplot(x='income', y='life_exp', data=usa, alpha=0.7)",
@@ -1095,7 +1156,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:47.586Z"
+    "timestamp": "2018-10-22T08:33:47.586Z",
+    "cell": 14
   },
   {
     "code": "usa = data.loc[data['geo'] == 'United States', :]\nplt.figure(figsize=(8, 5))\nsns.scatterplot(x='income', y='life_exp', data=usa, alpha=0.7)",
@@ -1114,7 +1176,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:47.909Z"
+    "timestamp": "2018-10-22T08:33:47.909Z",
+    "cell": 14
   },
   {
     "code": "g = sns.PairGrid(data=usa)\ng.map(plt.scatter)",
@@ -1130,7 +1193,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:32:18.955Z"
+    "timestamp": "2018-10-22T08:32:18.955Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa)\n",
@@ -1149,7 +1213,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:33:53.180Z"
+    "timestamp": "2018-10-22T08:33:53.180Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa, hue='year',\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\ng.map_diag(plt.hist)\ng.map_upper(plt.scatter)",
@@ -1165,7 +1230,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:35:33.515Z"
+    "timestamp": "2018-10-22T08:35:33.515Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa, hue='year',\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\ng.map_diag(plt.hist)\ng.map_upper(plt.scatter)",
@@ -1184,7 +1250,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:35:49.874Z"
+    "timestamp": "2018-10-22T08:35:49.874Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\ng.map_diag(plt.hist)\ng.map_upper(plt.scatter)",
@@ -1200,7 +1267,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:37:39.877Z"
+    "timestamp": "2018-10-22T08:37:39.877Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\ng.map_diag(plt.hist)\ng.map_upper(plt.scatter)\ng.add_legend()",
@@ -1213,7 +1281,8 @@
       "msg_type": "stream",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:37:51.937Z"
+    "timestamp": "2018-10-22T08:37:51.937Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\ng.map_diag(plt.hist)\ng.map_upper(plt.scatter)\ng.add_legend()",
@@ -1229,7 +1298,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:37:52.317Z"
+    "timestamp": "2018-10-22T08:37:52.317Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\ng.map_diag(plt.hist)\ng.map_upper(plt.scatter)\ng.add_legend()",
@@ -1248,7 +1318,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:37:53.471Z"
+    "timestamp": "2018-10-22T08:37:53.471Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\n\ng = g.map_diag(plt.hist)\ng = g.map_upper(plt.scatter, s=40)\ng = g.add_legend()",
@@ -1261,7 +1332,8 @@
       "msg_type": "stream",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:38:31.609Z"
+    "timestamp": "2018-10-22T08:38:31.609Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\n\ng = g.map_diag(plt.hist)\ng = g.map_upper(plt.scatter, s=40)\ng = g.add_legend()",
@@ -1280,7 +1352,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:38:33.098Z"
+    "timestamp": "2018-10-22T08:38:33.098Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\n\ng = g.map_diag(plt.hist)\ng = g.map_upper(plt.line, s=40)\ng = g.add_legend()",
@@ -1299,7 +1372,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:38:45.099Z"
+    "timestamp": "2018-10-22T08:38:45.099Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\n\ng = g.map_diag(plt.hist)\ng = g.map_upper(plt.line, s=40)\ng = g.add_legend()",
@@ -1318,7 +1392,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:38:46.175Z"
+    "timestamp": "2018-10-22T08:38:46.175Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\n\ng = g.map_diag(plt.hist)\ng = g.map_upper(plt.plot)\ng = g.add_legend()",
@@ -1331,7 +1406,8 @@
       "msg_type": "stream",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:38:53.687Z"
+    "timestamp": "2018-10-22T08:38:53.687Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\n\ng = g.map_diag(plt.hist)\ng = g.map_upper(plt.plot)\ng = g.add_legend()",
@@ -1350,7 +1426,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:38:54.968Z"
+    "timestamp": "2018-10-22T08:38:54.968Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\n\ng = g.map_diag(plt.hist)\ng = g.map_upper(plt.plot)\ng = g.map_lower(plt.scatter, s=20)\ng = g.add_legend()",
@@ -1363,7 +1440,8 @@
       "msg_type": "stream",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:40:03.298Z"
+    "timestamp": "2018-10-22T08:40:03.298Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\n\ng = g.map_diag(plt.hist)\ng = g.map_upper(plt.plot)\ng = g.map_lower(plt.scatter, s=20)\ng = g.add_legend()",
@@ -1382,7 +1460,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:40:04.666Z"
+    "timestamp": "2018-10-22T08:40:04.666Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\n\ng = g.map_diag(plt.hist)\ng = g.map_off_diag(plt.scatter, s=5)\ng = g.add_legend()",
@@ -1401,7 +1480,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:40:33.195Z"
+    "timestamp": "2018-10-22T08:40:33.195Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\n\ng = g.map_diag(plt.hist)\ng = g.map_off_diag(plt.scatter, s=5)\ng = g.add_legend()",
@@ -1420,7 +1500,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:40:34.275Z"
+    "timestamp": "2018-10-22T08:40:34.275Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\n\ng = g.map_diag(plt.hist)\ng = g.map_offdiag(plt.scatter, s=5)\ng = g.add_legend()",
@@ -1433,7 +1514,8 @@
       "msg_type": "stream",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:40:40.873Z"
+    "timestamp": "2018-10-22T08:40:40.873Z",
+    "cell": 15
   },
   {
     "code": "g = sns.PairGrid(data=usa,\n                 vars=['income', 'life_exp', 'fertility', 'child_mortality'])\n\ng = g.map_diag(plt.hist)\ng = g.map_offdiag(plt.scatter, s=5)\ng = g.add_legend()",
@@ -1452,7 +1534,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T08:40:43.210Z"
+    "timestamp": "2018-10-22T08:40:43.210Z",
+    "cell": 15
   },
   {
     "code": "data",
@@ -1469,7 +1552,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:51:19.187Z"
+    "timestamp": "2018-10-22T22:51:19.187Z",
+    "cell": 16
   },
   {
     "code": "decade_1950 = data[(data['year'] >= 1950) & (data['year'] < 1960)]\ndecade_2000 = data[(data['year'] >= 2000) & (data['year'] < 2010)]\n\ndata1950",
@@ -1492,7 +1576,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:52:57.892Z"
+    "timestamp": "2018-10-22T22:52:57.892Z",
+    "cell": 17
   },
   {
     "code": "decade_1950 = data[(data['year'] >= 1950) & (data['year'] < 1960)]\ndecade_2000 = data[(data['year'] >= 2000) & (data['year'] < 2010)]\n\ndata_1950",
@@ -1511,7 +1596,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:53:25.741Z"
+    "timestamp": "2018-10-22T22:53:25.741Z",
+    "cell": 17
   },
   {
     "code": "decade_1950 = data[(data['year'] >= 1950) & (data['year'] < 1960)]\ndecade_2000 = data[(data['year'] >= 2000) & (data['year'] < 2010)]\n\ndecade_1950",
@@ -1528,7 +1614,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:53:29.752Z"
+    "timestamp": "2018-10-22T22:53:29.752Z",
+    "cell": 17
   },
   {
     "code": "def decade(year):\n    return year // 10 * 10\n\ndata['decade'] = data['year'].apply(decade)\ndata",
@@ -1545,7 +1632,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:54:31.739Z"
+    "timestamp": "2018-10-22T22:54:31.739Z",
+    "cell": 17
   },
   {
     "code": "sns.boxplot(x='decade', y='child_mortality', data=data)",
@@ -1561,7 +1649,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:54:52.644Z"
+    "timestamp": "2018-10-22T22:54:52.644Z",
+    "cell": 18
   },
   {
     "code": "sns.boxplot(x='decade', y='child_mortality', data=data)",
@@ -1580,7 +1669,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:54:53.180Z"
+    "timestamp": "2018-10-22T22:54:53.180Z",
+    "cell": 18
   },
   {
     "code": "plt.figure(figsize=(8, 5))\nsns.boxplot(x='decade', y='child_mortality', data=data)",
@@ -1596,7 +1686,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:55:10.682Z"
+    "timestamp": "2018-10-22T22:55:10.682Z",
+    "cell": 18
   },
   {
     "code": "plt.figure(figsize=(8, 5))\nsns.boxplot(x='decade', y='child_mortality', data=data)",
@@ -1615,7 +1706,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:55:11.109Z"
+    "timestamp": "2018-10-22T22:55:11.109Z",
+    "cell": 18
   },
   {
     "code": "plt.figure(figsize=(8, 5))\nsns.lineplot(x='year', y='child_mortality', data=data)",
@@ -1631,7 +1723,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:55:53.056Z"
+    "timestamp": "2018-10-22T22:55:53.056Z",
+    "cell": 18
   },
   {
     "code": "plt.figure(figsize=(8, 5))\nsns.lineplot(x='year', y='child_mortality', data=data)",
@@ -1650,7 +1743,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:55:53.397Z"
+    "timestamp": "2018-10-22T22:55:53.397Z",
+    "cell": 18
   },
   {
     "code": "sns.boxplot(x='decade', y='child_mortality', data=data)",
@@ -1666,7 +1760,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:54:52.644Z"
+    "timestamp": "2018-10-22T22:54:52.644Z",
+    "cell": 19
   },
   {
     "code": "sns.boxplot(x='decade', y='child_mortality', data=data)",
@@ -1685,7 +1780,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:54:53.180Z"
+    "timestamp": "2018-10-22T22:54:53.180Z",
+    "cell": 19
   },
   {
     "code": "plt.figure(figsize=(8, 5))\nsns.boxplot(x='decade', y='child_mortality', data=data)",
@@ -1701,7 +1797,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:55:10.682Z"
+    "timestamp": "2018-10-22T22:55:10.682Z",
+    "cell": 19
   },
   {
     "code": "plt.figure(figsize=(8, 5))\nsns.boxplot(x='decade', y='child_mortality', data=data)",
@@ -1720,7 +1817,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:55:11.109Z"
+    "timestamp": "2018-10-22T22:55:11.109Z",
+    "cell": 19
   },
   {
     "code": "plt.figure(figsize=(8, 5))\nsns.lineplot(x='year', y='child_mortality', data=data)",
@@ -1736,7 +1834,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:55:53.056Z"
+    "timestamp": "2018-10-22T22:55:53.056Z",
+    "cell": 19
   },
   {
     "code": "plt.figure(figsize=(8, 5))\nsns.lineplot(x='year', y='child_mortality', data=data)",
@@ -1755,7 +1854,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:55:53.397Z"
+    "timestamp": "2018-10-22T22:55:53.397Z",
+    "cell": 19
   },
   {
     "code": "plt.figure(figsize=(8, 5))\nsns.lineplot(x='year', y='life_exp', data=data)",
@@ -1771,7 +1871,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:56:24.933Z"
+    "timestamp": "2018-10-22T22:56:24.933Z",
+    "cell": 19
   },
   {
     "code": "plt.figure(figsize=(8, 5))\nsns.lineplot(x='year', y='life_exp', data=data)",
@@ -1790,7 +1891,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:56:25.205Z"
+    "timestamp": "2018-10-22T22:56:25.205Z",
+    "cell": 19
   },
   {
     "code": "data",
@@ -1807,7 +1909,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:58:01.124Z"
+    "timestamp": "2018-10-22T22:58:01.124Z",
+    "cell": 21
   },
   {
     "code": "X = data[['income', 'fertility']]\ny = data['life_exp']\n\nX",
@@ -1824,7 +1927,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:58:38.801Z"
+    "timestamp": "2018-10-22T22:58:38.801Z",
+    "cell": 21
   },
   {
     "code": "clf = lm.LinearRegression()\nclf.fit(X, y)",
@@ -1840,7 +1944,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:59:00.972Z"
+    "timestamp": "2018-10-22T22:59:00.972Z",
+    "cell": 22
   },
   {
     "code": "clf = lm.LinearRegression()\nclf.fit(X, y)\nclf.coef_, clf.intercept_",
@@ -1856,7 +1961,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:59:18.379Z"
+    "timestamp": "2018-10-22T22:59:18.379Z",
+    "cell": 22
   },
   {
     "code": "clf.score(X, y)",
@@ -1872,7 +1978,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T22:59:46.377Z"
+    "timestamp": "2018-10-22T22:59:46.377Z",
+    "cell": 24
   },
   {
     "code": "plt.scatter(X['income'], y)",
@@ -1888,7 +1995,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:00:30.627Z"
+    "timestamp": "2018-10-22T23:00:30.627Z",
+    "cell": 25
   },
   {
     "code": "plt.scatter(X['income'], y)",
@@ -1907,7 +2015,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:00:31.273Z"
+    "timestamp": "2018-10-22T23:00:31.273Z",
+    "cell": 25
   },
   {
     "code": "plt.scatter(X['income'], y, alpha=0.1)",
@@ -1923,7 +2032,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:00:39.004Z"
+    "timestamp": "2018-10-22T23:00:39.004Z",
+    "cell": 25
   },
   {
     "code": "plt.scatter(X['income'], y, alpha=0.1)",
@@ -1942,7 +2052,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:00:39.793Z"
+    "timestamp": "2018-10-22T23:00:39.793Z",
+    "cell": 25
   },
   {
     "code": "sns.lineplot(X['income'], y)",
@@ -1970,7 +2081,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:01:13.451Z"
+    "timestamp": "2018-10-22T23:01:13.451Z",
+    "cell": 25
   },
   {
     "code": "sns.lineplot(X['income'], y)",
@@ -1989,7 +2101,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:01:13.636Z"
+    "timestamp": "2018-10-22T23:01:13.636Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nsns.kdeplot(X[sample], y[sample])",
@@ -2011,7 +2124,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:03:37.734Z"
+    "timestamp": "2018-10-22T23:03:37.734Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nsns.kdeplot(X.iloc[sample, :], y.iloc[sample])",
@@ -2024,7 +2138,8 @@
       "msg_type": "stream",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:03:58.706Z"
+    "timestamp": "2018-10-22T23:03:58.706Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nsns.kdeplot(X.iloc[sample, :], y.iloc[sample])",
@@ -2040,7 +2155,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:03:59.821Z"
+    "timestamp": "2018-10-22T23:03:59.821Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nsns.kdeplot(X.iloc[sample, :], y.iloc[sample])",
@@ -2059,7 +2175,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:04:00.005Z"
+    "timestamp": "2018-10-22T23:04:00.005Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nsns.kdeplot(X.iloc[sample, 'income'], y.iloc[sample])",
@@ -2086,7 +2203,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:04:14.205Z"
+    "timestamp": "2018-10-22T23:04:14.205Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nsns.kdeplot(X.iloc[sample, 0], y.iloc[sample])",
@@ -2102,7 +2220,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:04:26.805Z"
+    "timestamp": "2018-10-22T23:04:26.805Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nsns.kdeplot(X.iloc[sample, 0], y.iloc[sample])",
@@ -2121,7 +2240,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:04:26.981Z"
+    "timestamp": "2018-10-22T23:04:26.981Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.hexbin(X.iloc[sample, 0], y.iloc[sample])",
@@ -2137,7 +2257,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:10.651Z"
+    "timestamp": "2018-10-22T23:06:10.651Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.hexbin(X.iloc[sample, 0], y.iloc[sample])",
@@ -2156,7 +2277,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:11.201Z"
+    "timestamp": "2018-10-22T23:06:11.201Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample])",
@@ -2172,7 +2294,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:44.672Z"
+    "timestamp": "2018-10-22T23:06:44.672Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample])",
@@ -2191,7 +2314,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:44.908Z"
+    "timestamp": "2018-10-22T23:06:44.908Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], size=2)",
@@ -2216,7 +2340,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:51.101Z"
+    "timestamp": "2018-10-22T23:06:51.101Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], size=2)",
@@ -2235,7 +2360,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:51.271Z"
+    "timestamp": "2018-10-22T23:06:51.271Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], s=2)",
@@ -2251,7 +2377,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:53.654Z"
+    "timestamp": "2018-10-22T23:06:53.654Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], s=2)",
@@ -2270,7 +2397,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:53.858Z"
+    "timestamp": "2018-10-22T23:06:53.858Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], s=2)\n\npredictions = clf.predict(X.iloc[sample, :], y.iloc[sample])\nplt.scatter(X.iloc[sample, 0], predictions, s=2)",
@@ -2289,7 +2417,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:07:57.104Z"
+    "timestamp": "2018-10-22T23:07:57.104Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], s=2)\n\npredictions = clf.predict(X.iloc[sample, :], y.iloc[sample])\nplt.scatter(X.iloc[sample, 0], predictions, s=2)",
@@ -2308,7 +2437,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:07:57.286Z"
+    "timestamp": "2018-10-22T23:07:57.286Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], s=2)\n\npredictions = clf.predict(X.iloc[sample, :])\nplt.scatter(X.iloc[sample, 0], predictions, s=2)",
@@ -2324,7 +2454,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:08:03.464Z"
+    "timestamp": "2018-10-22T23:08:03.464Z",
+    "cell": 25
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], s=2)\n\npredictions = clf.predict(X.iloc[sample, :])\nplt.scatter(X.iloc[sample, 0], predictions, s=2)",
@@ -2343,7 +2474,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:08:03.652Z"
+    "timestamp": "2018-10-22T23:08:03.652Z",
+    "cell": 25
   },
   {
     "code": "plt.scatter(X['income'], y)",
@@ -2359,7 +2491,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:00:30.627Z"
+    "timestamp": "2018-10-22T23:00:30.627Z",
+    "cell": 26
   },
   {
     "code": "plt.scatter(X['income'], y)",
@@ -2378,7 +2511,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:00:31.273Z"
+    "timestamp": "2018-10-22T23:00:31.273Z",
+    "cell": 26
   },
   {
     "code": "plt.scatter(X['income'], y, alpha=0.1)",
@@ -2394,7 +2528,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:00:39.004Z"
+    "timestamp": "2018-10-22T23:00:39.004Z",
+    "cell": 26
   },
   {
     "code": "plt.scatter(X['income'], y, alpha=0.1)",
@@ -2413,7 +2548,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:00:39.793Z"
+    "timestamp": "2018-10-22T23:00:39.793Z",
+    "cell": 26
   },
   {
     "code": "sns.lineplot(X['income'], y)",
@@ -2441,7 +2577,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:01:13.451Z"
+    "timestamp": "2018-10-22T23:01:13.451Z",
+    "cell": 26
   },
   {
     "code": "sns.lineplot(X['income'], y)",
@@ -2460,7 +2597,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:01:13.636Z"
+    "timestamp": "2018-10-22T23:01:13.636Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nsns.kdeplot(X[sample], y[sample])",
@@ -2482,7 +2620,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:03:37.734Z"
+    "timestamp": "2018-10-22T23:03:37.734Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nsns.kdeplot(X.iloc[sample, :], y.iloc[sample])",
@@ -2495,7 +2634,8 @@
       "msg_type": "stream",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:03:58.706Z"
+    "timestamp": "2018-10-22T23:03:58.706Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nsns.kdeplot(X.iloc[sample, :], y.iloc[sample])",
@@ -2511,7 +2651,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:03:59.821Z"
+    "timestamp": "2018-10-22T23:03:59.821Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nsns.kdeplot(X.iloc[sample, :], y.iloc[sample])",
@@ -2530,7 +2671,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:04:00.005Z"
+    "timestamp": "2018-10-22T23:04:00.005Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nsns.kdeplot(X.iloc[sample, 'income'], y.iloc[sample])",
@@ -2557,7 +2699,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:04:14.205Z"
+    "timestamp": "2018-10-22T23:04:14.205Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nsns.kdeplot(X.iloc[sample, 0], y.iloc[sample])",
@@ -2573,7 +2716,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:04:26.805Z"
+    "timestamp": "2018-10-22T23:04:26.805Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nsns.kdeplot(X.iloc[sample, 0], y.iloc[sample])",
@@ -2592,7 +2736,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:04:26.981Z"
+    "timestamp": "2018-10-22T23:04:26.981Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.hexbin(X.iloc[sample, 0], y.iloc[sample])",
@@ -2608,7 +2753,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:10.651Z"
+    "timestamp": "2018-10-22T23:06:10.651Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.hexbin(X.iloc[sample, 0], y.iloc[sample])",
@@ -2627,7 +2773,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:11.201Z"
+    "timestamp": "2018-10-22T23:06:11.201Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample])",
@@ -2643,7 +2790,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:44.672Z"
+    "timestamp": "2018-10-22T23:06:44.672Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample])",
@@ -2662,7 +2810,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:44.908Z"
+    "timestamp": "2018-10-22T23:06:44.908Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], size=2)",
@@ -2687,7 +2836,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:51.101Z"
+    "timestamp": "2018-10-22T23:06:51.101Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], size=2)",
@@ -2706,7 +2856,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:51.271Z"
+    "timestamp": "2018-10-22T23:06:51.271Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], s=2)",
@@ -2722,7 +2873,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:53.654Z"
+    "timestamp": "2018-10-22T23:06:53.654Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], s=2)",
@@ -2741,7 +2893,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:06:53.858Z"
+    "timestamp": "2018-10-22T23:06:53.858Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], s=2)\n\npredictions = clf.predict(X.iloc[sample, :], y.iloc[sample])\nplt.scatter(X.iloc[sample, 0], predictions, s=2)",
@@ -2760,7 +2913,8 @@
       "msg_type": "error",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:07:57.104Z"
+    "timestamp": "2018-10-22T23:07:57.104Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], s=2)\n\npredictions = clf.predict(X.iloc[sample, :], y.iloc[sample])\nplt.scatter(X.iloc[sample, 0], predictions, s=2)",
@@ -2779,7 +2933,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:07:57.286Z"
+    "timestamp": "2018-10-22T23:07:57.286Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], s=2)\n\npredictions = clf.predict(X.iloc[sample, :])\nplt.scatter(X.iloc[sample, 0], predictions, s=2)",
@@ -2795,7 +2950,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:08:03.464Z"
+    "timestamp": "2018-10-22T23:08:03.464Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 0], y.iloc[sample], s=2)\n\npredictions = clf.predict(X.iloc[sample, :])\nplt.scatter(X.iloc[sample, 0], predictions, s=2)",
@@ -2814,7 +2970,8 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:08:03.652Z"
+    "timestamp": "2018-10-22T23:08:03.652Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 1], y.iloc[sample], s=2)\n\npredictions = clf.predict(X.iloc[sample, :])\nplt.scatter(X.iloc[sample, 1], predictions, s=2)",
@@ -2830,7 +2987,8 @@
       "msg_type": "execute_result",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:21:54.638Z"
+    "timestamp": "2018-10-22T23:21:54.638Z",
+    "cell": 26
   },
   {
     "code": "sample = np.random.randint(0, 32411, size=1000)\n\nplt.scatter(X.iloc[sample, 1], y.iloc[sample], s=2)\n\npredictions = clf.predict(X.iloc[sample, :])\nplt.scatter(X.iloc[sample, 1], predictions, s=2)",
@@ -2849,6 +3007,7 @@
       "msg_type": "display_data",
       "version": "5.3"
     },
-    "timestamp": "2018-10-22T23:21:54.957Z"
+    "timestamp": "2018-10-22T23:21:54.957Z",
+    "cell": 26
   }
 ]
